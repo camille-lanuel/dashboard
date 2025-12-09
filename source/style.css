@@ -1,0 +1,272 @@
+:root {
+  --bkg-main: #cfe9f0;
+  --half-space: calc(0.5 * var(--space));
+  --primary: #3290a6;
+  --right-side-border: 1px solid #3290a640;
+  --secondary: #F2B544;
+  --shadow: 4px 4px 4px #3290a61a;
+  --space: 16px;
+  --txt: #261A1A;
+}
+
+/* ==================== */
+/* 1. GENERAL           */
+/* ==================== */
+
+body {
+  color: var(--txt);
+  font-family: 'PT Sans', sans-serif;
+  height: 100vh;
+  line-height: 1.3;
+  margin: 0;
+  width: 100vw;
+}
+
+::selection {
+  background-color: var(--secondary);
+}
+
+header, section, #sidebar {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+/* ==================== */
+/* 2. UTILITIES         */
+/* ==================== */
+
+.icon {
+  height: 1em;
+}
+
+.small-profile {
+  border-radius: 3rem;
+  height: 3rem;
+}
+
+.large-profile {
+  border-radius: 5rem;
+  height: 5rem;
+}
+
+/* ==================== */
+/* 3. LAYOUT            */
+/* ==================== */
+
+body {
+  display: grid;
+  grid-template-areas: "sidebar header" "sidebar main";
+  grid-template-columns: minmax(min-content, 250px) auto;
+  grid-template-rows: min-content 1fr;
+}
+
+/* sidebar */
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  grid-area: sidebar;
+}
+
+nav h1 {
+  align-items: center;
+  column-gap: var(--space);
+  display: flex;
+}
+
+/* header */
+
+header {
+  display: grid;
+  gap: var(--space);
+  grid-area: header;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: min-content min-content;
+}
+
+.header-section {
+  align-items: center;
+  column-gap: var(--space);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: var(--half-space);
+}
+
+#profile-container {
+  justify-content: flex-end;
+}
+
+#welcome-container {
+  justify-content: flex-start;
+}
+
+/* main content */
+
+main {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: 3fr 1fr;
+}
+
+#projects-container {
+  display: grid;
+  gap: var(--space);
+  grid-row: 1;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+#right-side {
+  grid-column: 2;
+}
+
+.trend {
+  align-items: center;
+  column-gap: var(--space);
+  display: flex;
+}
+
+/* ==================== */
+/* 4. COMPONENTS STYLE  */
+/* ==================== */
+
+/* sidebar */
+
+#sidebar {
+  background-color: var(--primary);
+  color: white;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  border-top: 1px solid white;
+  list-style-type: none;
+  margin: 0;
+  padding: var(--half-space) 0;
+}
+
+nav li {
+  align-items: center;
+  column-gap: var(--half-space);
+  display: flex;
+  font-size: 1.1rem;
+  padding: var(--half-space) 0;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* header */
+
+header {
+  background-color: white;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 1;
+}
+
+#searchbar {
+  background-color: white;
+  border-radius: calc(1rem + var(--half-space));
+  border: 1px solid var(--primary);
+  font-size: 1rem;
+  padding: var(--half-space) calc(0.5rem + var(--half-space));
+  width: 90%;
+}
+
+#searchbar:focus {
+  background-color: var(--bkg-main);
+  outline: 2px solid var(--primary);
+}
+
+header .icon {
+  height: calc(1rem + var(--half-space));
+}
+
+#profile-container, #welcome-container {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#welcome-container span {
+  font-size: 1.5rem;
+}
+
+/* buttons */
+
+button {
+  background-color: var(--primary);
+  border-radius: calc(1.1rem + 8px);
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: 8px;
+  width: 6rem;
+}
+
+button:hover {
+  background-color: var(--secondary);
+  color: var(--txt);
+  cursor: pointer;
+}
+
+/* main content */
+
+main {
+  background-color: var(--bkg-main);
+}
+
+main h1 {
+  margin-left: var(--space);
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--space);
+  box-shadow: var(--shadow);
+  padding: var(--space);
+}
+
+#right-side .card article:nth-child(even) {
+  border-bottom: var(--right-side-border);
+  border-top: var(--right-side-border);
+  margin: 12px 0;
+  padding: 12px 0;
+}
+
+.trend {
+  font-size: 1.1rem;
+}
+
+.trend-tag {
+  font-weight: bold;
+}
