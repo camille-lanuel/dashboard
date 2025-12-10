@@ -249,9 +249,13 @@ main h1 {
 
 .card {
   background-color: white;
-  border-radius: var(--space);
+  border-radius: var(--half-space);
   box-shadow: var(--shadow);
   padding: var(--space);
+}
+
+#projects .card {
+  border-left: var(--half-space) solid var(--secondary);
 }
 
 #right-side .card article:nth-child(even) {
