@@ -189,6 +189,10 @@ nav a:hover {
   font-weight: bold;
 }
 
+nav a:hover .icon {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(0%) saturate(0%) hue-rotate(333deg) brightness(99%) contrast(92%);
+}
+
 /* header */
 
 header {
