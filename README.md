@@ -5,3 +5,9 @@ Icons from [Material Design Icons](https://pictogrammers.com/library/mdi/).
 Profile pictures from the Netflix series Aggretsuko.
 
 ![](screenshot.png)
+
+# TODO
+
+- [ ] Improve contrast (white over blue)
+
+- [ ] Improve responsiveness on mobile/tablet
