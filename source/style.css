@@ -101,7 +101,7 @@ header {
   display: grid;
   gap: var(--space);
   grid-area: header;
-  grid-template-columns: 3fr minmax(min-content, 1fr);
+  grid-template-columns: 3fr minmax(max-content, 1fr);
   grid-template-rows: min-content min-content;
 }
 
@@ -110,12 +110,13 @@ header {
   column-gap: var(--space);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   row-gap: var(--half-space);
 }
 
-#profile-container {
-  justify-content: flex-end;
+#search-container {
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 #welcome-container {
@@ -160,6 +161,7 @@ main {
 
 #sidebar h1 {
   font-size: 1.5rem;
+  margin-right: var(--space);
 }
 
 #sidebar ul {
