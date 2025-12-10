@@ -8,6 +8,8 @@ Profile pictures from the Netflix series Aggretsuko.
 
 # TODO
 
-- [ ] Improve contrast (white over blue)
+- [x] Improve contrast (white over blue)
 
 - [ ] Improve responsiveness on mobile/tablet
+
+- [ ] Change icons
