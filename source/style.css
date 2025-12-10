@@ -1,12 +1,12 @@
 :root {
-  --bkg-main: #cfe9f0;
+  --bkg-main: #F2F2F2;
   --half-space: calc(0.5 * var(--space));
-  --primary: #3290a6;
-  --right-side-border: 1px solid #3290a640;
-  --secondary: #F2B544;
-  --shadow: 4px 4px 4px #3290a61a;
+  --primary: #0477bf;
+  --right-side-border: 1px solid var(--bkg-main);
+  --secondary: #F29D35;
+  --shadow: 4px 4px 4px #3333331a;
   --space: 16px;
-  --txt: #261A1A;
+  --txt: #333;
 }
 
 /* ==================== */
@@ -25,12 +25,12 @@ body {
 }
 
 header, section, #sidebar {
-  padding: 16px;
+  padding: var(--space);
 }
 
 h1 {
   font-size: 1.25rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem var(--space);
 }
 
 h2 {
@@ -44,7 +44,7 @@ a {
 
 a:hover {
   color: var(--secondary);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 p {
@@ -57,7 +57,7 @@ p {
 /* ==================== */
 
 .icon {
-  height: 1em;
+  height: 1.1em;
 }
 
 .small-profile {
@@ -91,7 +91,7 @@ body {
 
 nav h1 {
   align-items: center;
-  column-gap: var(--space);
+  column-gap: var(--half-space);
   display: flex;
 }
 
@@ -158,11 +158,11 @@ main {
   color: white;
 }
 
-nav h1 {
+#sidebar h1 {
   font-size: 1.5rem;
 }
 
-nav ul {
+#sidebar ul {
   border-top: 1px solid white;
   list-style-type: none;
   margin: 0;
@@ -171,15 +171,20 @@ nav ul {
 
 nav a {
   align-items: center;
+  color: inherit;
   column-gap: var(--half-space);
   display: flex;
   font-size: 1.1rem;
-  padding: var(--half-space) 0;
+  padding: var(--half-space) var(--space);
+  text-decoration: none;
 }
 
-nav a {
-  color: inherit;
-  text-decoration: none;
+nav a:hover {
+  background-color: var(--secondary);
+  background-size: 100%;
+  border-radius: 99rem;
+  color: var(--txt);
+  font-weight: bold;
 }
 
 /* header */
@@ -235,16 +240,13 @@ button:hover {
   background-color: var(--secondary);
   color: var(--txt);
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* main content */
 
 main {
   background-color: var(--bkg-main);
-}
-
-main h1 {
-  margin-left: var(--space);
 }
 
 .card {
