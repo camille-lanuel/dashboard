@@ -10,7 +10,7 @@ Profile pictures from the Netflix series Aggretsuko.
 
 - [x] Improve contrast (white over blue)
 
-- [ ] Improve responsiveness on mobile/tablet
+- [x] Improve responsiveness on mobile/tablet
 
 - [x] Change icons
 

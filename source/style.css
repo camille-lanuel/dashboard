@@ -4,9 +4,13 @@
   --primary: #0477bf;
   --right-side-border: 1px solid var(--bkg-main);
   --secondary: #F29D35;
-  --shadow: 4px 4px 4px #3333331a;
+  --shadow: 4px 4px 4px rgba(51, 51, 51, 0.1);
   --space: 16px;
   --txt: #333;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* ==================== */
@@ -16,16 +20,13 @@
 body {
   color: var(--txt);
   font-family: 'PT Sans', sans-serif;
+  height: 100vh;
   line-height: 1.3;
   margin: 0;
 }
 
 ::selection {
   background-color: var(--secondary);
-}
-
-header, section, #sidebar {
-  padding: var(--space);
 }
 
 h1 {
@@ -77,7 +78,7 @@ p {
 body {
   display: grid;
   grid-template-areas: "sidebar header" "sidebar main";
-  grid-template-columns: minmax(min-content, 250px) auto;
+  grid-template-columns: min-content 1fr;
   grid-template-rows: min-content 1fr;
 }
 
@@ -99,9 +100,9 @@ nav h1 {
 
 header {
   display: grid;
-  gap: var(--space);
+  row-gap: var(--space);
   grid-area: header;
-  grid-template-columns: 3fr minmax(max-content, 1fr);
+  grid-template-columns: 3fr minmax(min-content, 1fr);
   grid-template-rows: min-content min-content;
 }
 
@@ -110,13 +111,16 @@ header {
   column-gap: var(--space);
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   row-gap: var(--half-space);
 }
 
-#search-container {
+#search-container, #profile-container {
   flex-wrap: nowrap;
-  justify-content: center;
+}
+
+#profile-container {
+  justify-content: flex-end;
 }
 
 #welcome-container {
@@ -148,6 +152,37 @@ main {
   display: flex;
 }
 
+/* media queries */
+
+@media (max-width: 1200px) {
+  :root {
+    --space: 8px;
+  }
+
+  body {
+    display: flex;
+    flex-direction:column;
+  }
+
+  #sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header {
+    align-items: center;
+    grid-area: header;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /* ==================== */
 /* 4. COMPONENTS STYLE  */
 /* ==================== */
@@ -157,6 +192,7 @@ main {
 #sidebar {
   background-color: var(--primary);
   color: white;
+  padding: var(--space);
 }
 
 #sidebar h1 {
@@ -198,8 +234,13 @@ nav a:hover .icon {
 header {
   background-color: white;
   box-shadow: var(--shadow);
+  padding: var(--space) 0;
   position: relative;
   z-index: 1;
+}
+
+.header-section {
+  padding: 0 var(--space);
 }
 
 #searchbar {
@@ -255,6 +296,10 @@ main {
   background-color: var(--bkg-main);
 }
 
+main section {
+  padding: var(--space);
+}
+
 .card {
   background-color: white;
   border-radius: var(--half-space);
@@ -279,4 +324,16 @@ main {
 
 .trend-tag {
   font-weight: bold;
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+  nav a,  button {
+    font-size: 1rem;
+  }
+
+  #welcome-container .large-profile {
+    display: none;
+  }
 }
