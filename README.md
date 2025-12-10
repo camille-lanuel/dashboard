@@ -12,4 +12,6 @@ Profile pictures from the Netflix series Aggretsuko.
 
 - [ ] Improve responsiveness on mobile/tablet
 
-- [ ] Change icons
+- [x] Change icons
+
+- [ ] Update readme screenshot
