@@ -1,283 +1,243 @@
-@import url(https://fonts.bunny.net/css?family=sen:400,500,600,700,800);
+@import "https://fonts.bunny.net/css?family=sen:400,500,600,700,800";
 
 :root {
-  --txt: #333;
-  --bkg-main: #F2F2F2;
-  --primary: #0477bf;
-  --secondary: #F29D35;
-  --shadow: 4px 4px 4px rgba(51, 51, 51, 0.1);
-  --space: 16px;
-  --half-space: calc(0.5 * var(--space));
-  --right-side-border: 1px solid var(--bkg-main);
+  --txt:#333;
+  --bkg-main:#F2F2F2;
+  --primary:#0477bf;
+  --secondary:#F29D35;
+  --right-side-border:1px solid var(--bkg-main);
+  --shadow:4px 4px 4px rgba(51,51,51,0.1);
+  --space:16px;
+  --half-space:calc(0.5 * var(--space))
 }
 
-/* ==================== */
-/* 1. GENERAL           */
-/* ==================== */
+/* GENERAL */
 
 body {
-  color: var(--txt);
-  font-family: 'Sen', sans-serif;
-  height: 100vh;
-  line-height: 1.3;
-  margin: 0;
+  color:var(--txt);
+  display:grid;
+  font-family:'Sen',sans-serif;
+  grid-template-areas:"sidebar header" "sidebar main";
+  grid-template-columns:min-content 1fr;
+  grid-template-rows:min-content 1fr;
+  height:100vh;
+  line-height:1.3;
+  margin:0
 }
 
 ::selection {
-  background-color: var(--secondary);
+  background-color:var(--secondary)
 }
 
 h1 {
-  font-size: 1.25rem;
-  margin: 0 0 1rem var(--space);
+  font-size:1.25rem;
+  margin:0 0 1rem var(--space)
 }
 
 h2 {
-  font-size: 1.1rem;
-  margin: 0;
+  font-size:1.1rem;
+  margin:0
 }
 
 a {
-  color: var(--primary);
+  color:var(--primary)
 }
 
 a:hover {
-  color: var(--secondary);
-  text-decoration: none;
+  color:var(--secondary);
+  text-decoration:none
 }
 
 p {
-  margin: 0;
-  padding-top: 0.5rem;
+  margin:0;
+  padding-top:.5rem
 }
 
-/* ==================== */
-/* 2. UTILITIES         */
-/* ==================== */
-
 .icon {
-  height: 1.1em;
+  height:1.1em
 }
 
 .small-profile {
-  border-radius: 3rem;
-  height: 3rem;
+  border-radius:3rem;
+  height:3rem
 }
 
 .large-profile {
-  border-radius: 5rem;
-  height: 5rem;
+  border-radius:5rem;
+  height:5rem
 }
 
-/* ==================== */
-/* 3. LAYOUT            */
-/* ==================== */
-
-body {
-  display: grid;
-  grid-template-areas: "sidebar header" "sidebar main";
-  grid-template-columns: min-content 1fr;
-  grid-template-rows: min-content 1fr;
+button {
+  background-color:var(--primary);
+  border:none;
+  border-radius:99rem;
+  color:white;
+  font-family:inherit;
+  font-size:1.1rem;
+  padding:var(--half-space);
+  width:6em
 }
 
-/* sidebar */
+button:hover,nav a:hover {
+  background-color:var(--secondary);
+  color:var(--txt);
+  cursor:pointer
+}
+
+/* SIDEBAR */
 
 #sidebar {
-  display: flex;
-  flex-direction: column;
-  grid-area: sidebar;
-}
-
-nav h1 {
-  align-items: center;
-  column-gap: var(--half-space);
-  display: flex;
-}
-
-/* header */
-
-header {
-  display: grid;
-  grid-area: header;
-  grid-template-columns: 3fr minmax(min-content, 1fr);
-  grid-template-rows: min-content min-content;
-  row-gap: var(--space);
-}
-
-.header-section {
-  align-items: center;
-  column-gap: var(--space);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  row-gap: var(--half-space);
-}
-
-#search-container, #profile-container {
-  flex-wrap: nowrap;
-}
-
-#profile-container {
-  justify-content: flex-end;
-}
-
-#welcome-container {
-  justify-content: flex-start;
-}
-
-/* main content */
-
-main {
-  display: grid;
-  grid-area: main;
-  grid-template-columns: 3fr minmax(min-content, 1fr);
-}
-
-#projects-container {
-  display: grid;
-  gap: var(--space);
-  grid-row: 1;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-}
-
-#right-side {
-  grid-column: 2;
-}
-
-.trend {
-  align-items: center;
-  column-gap: var(--space);
-  display: flex;
-}
-
-/* ==================== */
-/* 4. COMPONENTS STYLE  */
-/* ==================== */
-
-/* sidebar */
-
-#sidebar {
-  background-color: var(--primary);
-  color: white;
-  padding: var(--space);
+  background-color:var(--primary);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  grid-area:sidebar;
+  padding:var(--space)
 }
 
 #sidebar h1 {
-  font-size: 1.5rem;
-  margin-right: var(--space);
+  align-items:center;
+  column-gap:var(--half-space);
+  display:flex
+}
+
+#sidebar h1 {
+  font-size:1.5rem;
+  margin-right:var(--space)
 }
 
 #sidebar ul {
-  border-top: 1px solid white;
-  list-style-type: none;
-  margin: 0;
-  padding: var(--half-space) 0;
+  border-top:1px solid white;
+  list-style-type:none;
+  margin:0;
+  padding:var(--half-space) 0
 }
 
 nav a {
-  align-items: center;
-  background-size: 100%;
-  border-radius: 99rem;
-  color: inherit;
-  column-gap: var(--half-space);
-  display: flex;
-  font-size: 1.1rem;
-  padding: var(--half-space) var(--space);
-  text-decoration: none;
+  align-items:center;
+  background-size:100%;
+  border-radius:99rem;
+  color:inherit;
+  column-gap:var(--half-space);
+  display:flex;
+  font-size:1.1rem;
+  padding:var(--half-space) var(--space);
+  text-decoration:none
 }
 
 nav a:hover .icon {
-  filter: brightness(0) saturate(100%) invert(17%) sepia(0%) saturate(0%) hue-rotate(333deg) brightness(99%) contrast(92%);
+  filter:brightness(0) saturate(100%) invert(17%) sepia(0%) saturate(0%) hue-rotate(333deg) brightness(99%) contrast(92%)
 }
 
-/* header */
+/* HEADER */
 
 header {
-  background-color: white;
-  box-shadow: var(--shadow);
-  padding: var(--space) 0;
-  position: relative;
-  z-index: 1;
+  background-color:white;
+  box-shadow:var(--shadow);
+  display:grid;
+  grid-area:header;
+  grid-template-columns:3fr minmax(min-content,1fr);
+  grid-template-rows:min-content min-content;
+  padding:var(--space) 0;
+  position:relative;
+  row-gap:var(--space);
+  z-index:1
 }
 
 .header-section {
-  padding: 0 var(--space);
+  align-items:center;
+  column-gap:var(--space);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:0 var(--space);
+  row-gap:var(--half-space)
+}
+
+#search-container,#profile-container {
+  flex-wrap:nowrap
+}
+
+#profile-container {
+  justify-content:flex-end
+}
+
+#welcome-container {
+  justify-content:flex-start
 }
 
 #searchbar {
-  background-color: white;
-  border-radius: calc(1rem + var(--half-space));
-  border: 1px solid var(--primary);
-  font-size: 1rem;
-  padding: var(--half-space) calc(0.5rem + var(--half-space));
-  width: 90%;
+  background-color:white;
+  border:1px solid var(--primary);
+  border-radius:calc(1rem + var(--half-space));
+  font-size:1rem;
+  padding:var(--half-space) calc(0.5rem + var(--half-space));
+  width:90%
 }
 
 #searchbar:focus {
-  background-color: var(--bkg-main);
-  outline: 2px solid var(--primary);
+  background-color:var(--bkg-main);
+  outline:2px solid var(--primary)
 }
 
-#profile-container, #welcome-container {
-  font-size: 1.1rem;
-  font-weight: bold;
+#profile-container,#welcome-container {
+  font-size:1.1rem;
+  font-weight:bold
 }
 
 #welcome-container span {
-  font-size: 1.5rem;
+  font-size:1.5rem
 }
 
-/* buttons */
-
-button {
-  background-color: var(--primary);
-  border-radius: 99rem;
-  border: none;
-  color: white;
-  font-family: inherit;
-  font-size: 1.1rem;
-  padding: 8px;
-  width: 6rem;
-}
-
-button:hover, nav a:hover {
-  background-color: var(--secondary);
-  color: var(--txt);
-  cursor: pointer;
-}
-
-/* main content */
+/* MAIN CONTENT */
 
 main {
-  background-color: var(--bkg-main);
+  background-color:var(--bkg-main);
+  display:grid;
+  grid-area:main;
+  grid-template-columns:3fr minmax(min-content,1fr)
 }
 
 main section {
-  padding: var(--space);
+  padding:var(--space)
 }
 
 .card {
-  background-color: white;
-  border-radius: var(--half-space);
-  box-shadow: var(--shadow);
-  padding: var(--space);
+  background-color:white;
+  border-radius:var(--half-space);
+  box-shadow:var(--shadow);
+  padding:var(--space)
+}
+
+#projects-container {
+  display:grid;
+  gap:var(--space);
+  grid-row:1;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr))
 }
 
 #projects .card {
-  border-left: var(--half-space) solid var(--secondary);
+  border-left:var(--half-space) solid var(--secondary)
+}
+
+#right-side {
+  grid-column:2
 }
 
 #right-side .card article:nth-child(even) {
-  border-bottom: var(--right-side-border);
-  border-top: var(--right-side-border);
-  margin: 12px 0;
-  padding: 12px 0;
+  border-bottom:var(--right-side-border);
+  border-top:var(--right-side-border);
+  margin:calc(1.5 * var(--half-space)) 0;
+  padding:calc(1.5 * var(--half-space)) 0
 }
 
 .trend {
-  font-size: 1.1rem;
+  align-items:center;
+  column-gap:var(--space);
+  display:flex;
+  font-size:1.1rem
 }
 
 .trend-tag {
-  font-weight: bold;
+  font-weight:bold
 }
