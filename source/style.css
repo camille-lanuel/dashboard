@@ -1,16 +1,12 @@
 :root {
+  --txt: #333;
   --bkg-main: #F2F2F2;
-  --half-space: calc(0.5 * var(--space));
   --primary: #0477bf;
-  --right-side-border: 1px solid var(--bkg-main);
   --secondary: #F29D35;
   --shadow: 4px 4px 4px rgba(51, 51, 51, 0.1);
   --space: 16px;
-  --txt: #333;
-}
-
-* {
-  box-sizing: border-box;
+  --half-space: calc(0.5 * var(--space));
+  --right-side-border: 1px solid var(--bkg-main);
 }
 
 /* ==================== */
@@ -100,10 +96,10 @@ nav h1 {
 
 header {
   display: grid;
-  row-gap: var(--space);
   grid-area: header;
   grid-template-columns: 3fr minmax(min-content, 1fr);
   grid-template-rows: min-content min-content;
+  row-gap: var(--space);
 }
 
 .header-section {
@@ -150,37 +146,6 @@ main {
   align-items: center;
   column-gap: var(--space);
   display: flex;
-}
-
-/* media queries */
-
-@media (max-width: 1200px) {
-  :root {
-    --space: 8px;
-  }
-
-  body {
-    display: flex;
-    flex-direction:column;
-  }
-
-  #sidebar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  header {
-    align-items: center;
-    grid-area: header;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 /* ==================== */
@@ -324,16 +289,4 @@ main section {
 
 .trend-tag {
   font-weight: bold;
-}
-
-/* media queries */
-
-@media (max-width: 1200px) {
-  nav a,  button {
-    font-size: 1rem;
-  }
-
-  #welcome-container .large-profile {
-    display: none;
-  }
 }
