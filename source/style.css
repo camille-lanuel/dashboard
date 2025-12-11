@@ -212,6 +212,7 @@ main section {
 #projects-container {
   display:grid;
   gap:var(--space);
+  grid-auto-rows: 1fr;
   grid-row:1;
   grid-template-columns:repeat(auto-fit,minmax(350px,1fr))
 }
