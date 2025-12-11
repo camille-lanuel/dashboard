@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=sen:400,500,600,700,800);
+
 :root {
   --txt: #333;
   --bkg-main: #F2F2F2;
@@ -15,7 +17,7 @@
 
 body {
   color: var(--txt);
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Sen', sans-serif;
   height: 100vh;
   line-height: 1.3;
   margin: 0;
@@ -174,20 +176,14 @@ main {
 
 nav a {
   align-items: center;
+  background-size: 100%;
+  border-radius: 99rem;
   color: inherit;
   column-gap: var(--half-space);
   display: flex;
   font-size: 1.1rem;
   padding: var(--half-space) var(--space);
   text-decoration: none;
-}
-
-nav a:hover {
-  background-color: var(--secondary);
-  background-size: 100%;
-  border-radius: 99rem;
-  color: var(--txt);
-  font-weight: bold;
 }
 
 nav a:hover .icon {
@@ -222,10 +218,6 @@ header {
   outline: 2px solid var(--primary);
 }
 
-header .icon {
-  height: calc(1rem + var(--half-space));
-}
-
 #profile-container, #welcome-container {
   font-size: 1.1rem;
   font-weight: bold;
@@ -239,7 +231,7 @@ header .icon {
 
 button {
   background-color: var(--primary);
-  border-radius: calc(1.1rem + 8px);
+  border-radius: 99rem;
   border: none;
   color: white;
   font-family: inherit;
@@ -248,11 +240,10 @@ button {
   width: 6rem;
 }
 
-button:hover {
+button:hover, nav a:hover {
   background-color: var(--secondary);
   color: var(--txt);
   cursor: pointer;
-  font-weight: bold;
 }
 
 /* main content */
