@@ -1,4 +1,4 @@
-A fake [dashboard](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard) for the Odin Project.
+A fake [dashboard](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard) for the Odin Project. The goal is to use grids (as much as possible) to recreate the design. Note that it is not responsive (yet?).
 
 Profile pictures from the Netflix series Aggretsuko.
 
