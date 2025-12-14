@@ -20,7 +20,7 @@ body {
   grid-template-areas:"sidebar header" "sidebar main";
   grid-template-columns:min-content 1fr;
   grid-template-rows:min-content 1fr;
-  height:100vh;
+  min-height:100vh;
   line-height:1.3;
   margin:0
 }
@@ -72,6 +72,7 @@ button {
   border:none;
   border-radius:99rem;
   color:white;
+  cursor:pointer;
   font-family:inherit;
   font-size:1.1rem;
   padding:var(--half-space);
@@ -81,7 +82,6 @@ button {
 button:hover,nav a:hover {
   background-color:var(--secondary);
   color:var(--txt);
-  cursor:pointer
 }
 
 /* SIDEBAR */
