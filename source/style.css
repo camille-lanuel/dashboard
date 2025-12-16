@@ -175,6 +175,10 @@ header {
   width:90%
 }
 
+#search-container .icon {
+  height: calc(1em + var(--half-space));
+}
+
 #searchbar:focus {
   background-color:var(--bkg-main);
   outline:2px solid var(--primary)
