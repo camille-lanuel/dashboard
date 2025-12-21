@@ -184,7 +184,8 @@ header {
 
 #searchbar:focus {
   background-color: var(--bkg-main);
-  outline: 2px solid var(--primary);
+  border: none;
+  outline: 2px solid var(--secondary);
 }
 
 #profile-container,
