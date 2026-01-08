@@ -1,177 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Dashboard</title>
-</head>
-<body>
-  <nav id="sidebar">
-    <h1>
-      <img src="icons/lucide--layout-dashboard.svg" alt="paw" class="icon">
-      Dashboard
-    </h1>
-    <ul>
-      <li>
-        <a href=""><img src="icons/lucide--home.svg" alt="home icon" class="icon">Home</a>
-      </li>
-      <li>
-        <a href=""><img src="icons/lucide--circle-user-round.svg" alt="account icon" class="icon">Profile</a>
-      </li>
-      <li>
-        <a href=""><img src="icons/lucide--message-circle.svg" alt="message icon" class="icon">Messages</a>
-      </li>
-      <li>
-        <a href=""><img src="icons/lucide--clock-4.svg" alt="clock icon" class="icon">History</a>
-      </li>
-      <li>
-        <a href=""><img src="icons/lucide--list.svg" alt="list icon" class="icon">Tasks</a>
-      </li>
-      <li>
-        <a href=""><img src="icons/lucide--users-round.svg" alt="group icon" class="icon">Communities</a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-       <a href=""> <img src="icons/lucide--settings.svg" alt="cog icon" class="icon">Settings</a>
-      </li>
-      <li>
-        <a href=""><img src="icons/lucide--message-circle-question-mark.svg" alt="message question icon" class="icon">Support</a>
-      </li>
-      <li>
-        <a href=""><img src="icons/lucide--shield-half.svg" alt="shield icon" class="icon">Privacy</a>
-      </li>
-    </ul>
-  </nav>
-  <header>
-    <div id="search-container" class="header-section">
-      <img src="icons/lucide--search.svg" alt="magnifying glass icon" class="icon">
-      <input type="search" id="searchbar">
-    </div>
-    <div id="profile-container" class="header-section">
-      <img src="icons/lucide--bell.svg" alt="bell icon" class="icon">
-      <img src="pics/retsuko.jpg" alt="your profile picture" class="small-profile">
-      <span>Retsuko</span>
-    </div>
-    <div id="welcome-container" class="header-section">
-      <img src="pics/retsuko.jpg" alt="your profile picture" class="large-profile">
-      <div id="welcome-text">
-        Hi there,<br>
-        <span>Retsuko (@aggretsuko)</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <h1>
+        <img src="icons/lucide--layout-dashboard.svg" class="icon" />
+        Dashboard
+      </h1>
+      <ul>
+        <li>
+          <a href=""><img src="icons/lucide--home.svg" class="icon" />Home</a>
+        </li>
+        <li>
+          <a href=""
+            ><img
+              src="icons/lucide--circle-user-round.svg"
+              class="icon"
+            />Profile</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img
+              src="icons/lucide--message-circle.svg"
+              class="icon"
+            />Messages</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="icons/lucide--clock-4.svg" class="icon" />History</a
+          >
+        </li>
+        <li>
+          <a href=""><img src="icons/lucide--list.svg" class="icon" />Tasks</a>
+        </li>
+        <li>
+          <a href=""
+            ><img
+              src="icons/lucide--users-round.svg"
+              class="icon"
+            />Communities</a
+          >
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="">
+            <img src="icons/lucide--settings.svg" class="icon" />Settings</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img
+              src="icons/lucide--message-circle-question-mark.svg"
+              class="icon"
+            />Support</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="icons/lucide--shield-half.svg" class="icon" />Privacy</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <div id="search-container" class="header-section">
+        <img
+          src="icons/lucide--search.svg"
+          alt="magnifying glass icon"
+          class="icon"
+        />
+        <input type="search" id="searchbar" />
       </div>
-    </div>
-    <div id="buttons-container" class="header-section">
-      <button>
-        New
-      </button>
-      <button>
-        Upload
-      </button>
-      <button>
-        Share
-      </button>
-    </div>
-  </header>
-  <main>
-    <section id="projects">
-      <h1>Your projects</h1>
-      <div id="projects-container">
-        <article class="card">
-          <h2>Lorem ipsum</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas tempor consectetur pharetra aliquam vehicula massa aenean nullam ad purus litora orci. Ligula vehicula tristique eget platea eu rhoncus adipiscing quam duis facilisis. Suspendisse laoreet ad senectus nunc rutrum maximus nostra dictumst elementum. Luctus risus a interdum vehicula porttitor lectus augue velit gravida rutrum fusce maximus nisi finibus ultrices. Primis sem senectus consequat molestie lorem est cubilia ac condimentum pellentesque.
-          </p>
-        </article>
-        <article class="card">
-          <h2>Lorem ipsum</h2>
-          <p>
-            Convallis vestibulum vehicula himenaeos lobortis nostra imperdiet vitae tristique accumsan aptent luctus. Vivamus per finibus est eros elementum litora rutrum ornare vestibulum et non magna viverra ullamcorper tincidunt. Odio dictumst eget vestibulum non sed conubia amet mattis. Justo sollicitudin mi consequat phasellus turpis nam nam scelerisque.
-          </p>
-        </article>
-        <article class="card">
-          <h2>Lorem ipsum</h2>
-          <p>
-            Ultricies tempor aptent ut commodo ipsum class maximus nisl. Sollicitudin euismod tellus rhoncus interdum eu elementum.
-          </p>
-          <p>
-            Dolor cursus vivamus suspendisse orci quam sem torquent habitant cras bibendum vitae tempor libero. Volutpat cursus in id hendrerit nisl egestas lobortis. Elementum mauris potenti neque rutrum risus id. Condimentum tristique ornare cras egestas semper vehicula habitasse pulvinar semper nulla dictumst nam tortor sollicitudin sem. Amet taciti cubilia venenatis convallis magna tempus varius ultricies egestas tristique ligula.
-          </p>
-        </article>
-        <article class="card">
-          <h2>Lorem ipsum</h2>
-          <p>
-            Dictum venenatis congue cras urna sed sit. Metus dolor ut diam scelerisque cras maecenas suspendisse vel at eu sollicitudin bibendum nullam. Congue phasellus pretium ac aliquam fringilla eros maximus est leo quam. Felis litora consequat dignissim morbi dignissim ipsum neque malesuada aliquet in duis.
-          </p>
-        </article>
-        <article class="card">
-          <h2>Lorem ipsum</h2>
-          <p>
-            Orci congue cursus ut laoreet etiam ornare sit elementum augue lectus sit metus nostra aliquam arcu. Platea felis ipsum vehicula urna rutrum dui fringilla iaculis pellentesque leo dictum sagittis suscipit.
-          </p>
-          <p>
-            Etiam class purus eleifend a nulla nisi iaculis diam. Per nisl hendrerit arcu litora malesuada arcu id sollicitudin class ut.
-          </p>
-        </article>
-        <article class="card">
-          <h2>Lorem ipsum</h2>
-          <p>
-            Ad mattis in porta consectetur proin. Maecenas senectus nunc placerat integer nisl sem. Felis placerat aptent leo amet rutrum amet urna maecenas nec at habitasse vel. Ex quisque a vulputate cursus pellentesque luctus tempus ultrices cubilia euismod mattis.
-          </p>
-        </article>
+      <div id="profile-container" class="header-section">
+        <img src="icons/lucide--bell.svg" class="icon" />
+        <img
+          src="pics/retsuko.jpg"
+          alt="your profile picture"
+          class="small-profile"
+        />
+        <span>Retsuko</span>
       </div>
-    </section>
-    <div id="right-side">
-      <section id="announcements">
-        <h1>Announcements</h1>
-        <div class="card">
-          <article>
-            <h2>Site maintenance</h2>
-            <p>This website will be on maintenance from January 1st, 1970 to the end of times. Thank you for your understanding.</p>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Read more</a>
+      <div id="welcome-container" class="header-section">
+        <img
+          src="pics/retsuko.jpg"
+          alt="your profile picture"
+          class="large-profile"
+        />
+        <div id="welcome-text">
+          Hi there,<br />
+          <span>Retsuko (@aggretsuko)</span>
+        </div>
+      </div>
+      <div id="buttons-container" class="header-section">
+        <button>New</button>
+        <button>Upload</button>
+        <button>Share</button>
+      </div>
+    </header>
+    <main>
+      <section id="projects">
+        <h1>Your projects</h1>
+        <div id="projects-container">
+          <article class="card">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Maecenas tempor consectetur pharetra aliquam vehicula massa aenean
+              nullam ad purus litora orci. Ligula vehicula tristique eget platea
+              eu rhoncus adipiscing quam duis facilisis. Suspendisse laoreet ad
+              senectus nunc rutrum maximus nostra dictumst elementum. Luctus
+              risus a interdum vehicula porttitor lectus augue velit gravida
+              rutrum fusce maximus nisi finibus ultrices. Primis sem senectus
+              consequat molestie lorem est cubilia ac condimentum pellentesque.
+            </p>
           </article>
-          <article>
-            <h2>Big event coming soon</h2>
-            <p>Fames neque senectus erat quisque platea platea per. Per libero tellus phasellus fames habitasse auctor tincidunt neque.</p>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Read more</a>
+          <article class="card">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Convallis vestibulum vehicula himenaeos lobortis nostra imperdiet
+              vitae tristique accumsan aptent luctus. Vivamus per finibus est
+              eros elementum litora rutrum ornare vestibulum et non magna
+              viverra ullamcorper tincidunt. Odio dictumst eget vestibulum non
+              sed conubia amet mattis. Justo sollicitudin mi consequat phasellus
+              turpis nam nam scelerisque.
+            </p>
           </article>
-          <article>
-            <h2>Updated Privacy Policy</h2>
-            <p>Augue metus primis commodo sit fermentum dignissim aenean imperdiet ex vulputate facilisis egestas. Vulputate class nisi nisi justo torquent orci dictumst maximus nec.</p>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Read more</a>
+          <article class="card">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Ultricies tempor aptent ut commodo ipsum class maximus nisl.
+              Sollicitudin euismod tellus rhoncus interdum eu elementum.
+            </p>
+            <p>
+              Dolor cursus vivamus suspendisse orci quam sem torquent habitant
+              cras bibendum vitae tempor libero. Volutpat cursus in id hendrerit
+              nisl egestas lobortis. Elementum mauris potenti neque rutrum risus
+              id. Condimentum tristique ornare cras egestas semper vehicula
+              habitasse pulvinar semper nulla dictumst nam tortor sollicitudin
+              sem. Amet taciti cubilia venenatis convallis magna tempus varius
+              ultricies egestas tristique ligula.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Dictum venenatis congue cras urna sed sit. Metus dolor ut diam
+              scelerisque cras maecenas suspendisse vel at eu sollicitudin
+              bibendum nullam. Congue phasellus pretium ac aliquam fringilla
+              eros maximus est leo quam. Felis litora consequat dignissim morbi
+              dignissim ipsum neque malesuada aliquet in duis.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Orci congue cursus ut laoreet etiam ornare sit elementum augue
+              lectus sit metus nostra aliquam arcu. Platea felis ipsum vehicula
+              urna rutrum dui fringilla iaculis pellentesque leo dictum sagittis
+              suscipit.
+            </p>
+            <p>
+              Etiam class purus eleifend a nulla nisi iaculis diam. Per nisl
+              hendrerit arcu litora malesuada arcu id sollicitudin class ut.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Ad mattis in porta consectetur proin. Maecenas senectus nunc
+              placerat integer nisl sem. Felis placerat aptent leo amet rutrum
+              amet urna maecenas nec at habitasse vel. Ex quisque a vulputate
+              cursus pellentesque luctus tempus ultrices cubilia euismod mattis.
+            </p>
           </article>
         </div>
       </section>
-      <section id ="trending">
-        <h1>Trending</h1>
-        <div class="card">
-          <article class="trend">
-            <img src="pics/fenneko.jpg" alt="Fenneko" class="small-profile">
-            <div>
-              <span class="trend-tag">@fenneko_gossips</span>
-              <br>
-              <span class="trend-name">Fenneko</span>
-            </div>
-          </article>
-          <article class="trend">
-            <img src="pics/haida.png" alt="Fenneko" class="small-profile">
-            <div>
-              <span class="trend-tag">@haida</span>
-              <br>
-              <span class="trend-name">Haida</span>
-            </div>
-          </article>
-          <article class="trend">
-            <img src="pics/tsunoda.jpg" alt="Fenneko" class="small-profile">
-            <div>
-              <span class="trend-tag">@tsunodaaa</span>
-              <br>
-              <span class="trend-name">Tsunoda ⋆𐙚₊˚⊹♡</span>
-            </div>
-          </article>
-        </div>
-      </section>
-    </div>
-  </main>
-</body>
+      <div id="right-side">
+        <section id="announcements">
+          <h1>Announcements</h1>
+          <div class="card">
+            <article>
+              <h2>Site maintenance</h2>
+              <p>
+                This website will be on maintenance from January 1st, 1970 to
+                the end of times. Thank you for your understanding.
+              </p>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                >Read more</a
+              >
+            </article>
+            <article>
+              <h2>Big event coming soon</h2>
+              <p>
+                Fames neque senectus erat quisque platea platea per. Per libero
+                tellus phasellus fames habitasse auctor tincidunt neque.
+              </p>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                >Read more</a
+              >
+            </article>
+            <article>
+              <h2>Updated Privacy Policy</h2>
+              <p>
+                Augue metus primis commodo sit fermentum dignissim aenean
+                imperdiet ex vulputate facilisis egestas. Vulputate class nisi
+                nisi justo torquent orci dictumst maximus nec.
+              </p>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                >Read more</a
+              >
+            </article>
+          </div>
+        </section>
+        <section id="trending">
+          <h1>Trending</h1>
+          <div class="card">
+            <article class="trend">
+              <img
+                src="pics/fenneko.jpg"
+                alt="Fenneko's profile picture"
+                class="small-profile"
+              />
+              <div>
+                <span class="trend-tag">@fenneko_gossips</span>
+                <br />
+                <span class="trend-name">Fenneko</span>
+              </div>
+            </article>
+            <article class="trend">
+              <img
+                src="pics/haida.png"
+                alt="Haida's profile picture"
+                class="small-profile"
+              />
+              <div>
+                <span class="trend-tag">@haida</span>
+                <br />
+                <span class="trend-name">Haida</span>
+              </div>
+            </article>
+            <article class="trend">
+              <img
+                src="pics/tsunoda.jpg"
+                alt="Tsunoda's profile picture"
+                class="small-profile"
+              />
+              <div>
+                <span class="trend-tag">@tsunodaaa</span>
+                <br />
+                <span class="trend-name">Tsunoda ⋆𐙚₊˚⊹♡</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
